@@ -1,7 +1,5 @@
 ﻿***
 <h1 align="center" > Temporizador de Proposito Geral<br>
-
-<br>
 <br>
 
 1.Introdução
