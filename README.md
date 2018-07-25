@@ -1,5 +1,5 @@
 ﻿***
-<h1 align="right" > Temporizador de Proposito Geral<br>
+<h1 align="center" > Temporizador de Proposito Geral<br>
 
 <br>
 <br>
