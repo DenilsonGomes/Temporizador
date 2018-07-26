@@ -12,7 +12,7 @@ temporais.<p/>
 2.Especificações
 ==========
 
-<p>Esse projeto consiste em um temporizador, que usa um teclado matricial para a entrada
+<p>Esse temporizador usa um teclado matricial para a entrada
 do tempo desejado, um botão play/pause, um botão reset, um display de 4 digitos para monitoramento
 do tempo, um led e um buzzer para sinalizar visual e sonoramente o alarme. O prototipo foi montado usando um
 Arduino Uno com Atmega 328p.<p/>
@@ -21,7 +21,7 @@ Arduino Uno com Atmega 328p.<p/>
 -----------
 
 <p></p>
-<p>O sistema funciona contando o até o tempo desejado, que deve ser inserido com o teclado matricial. 
+<p>O sistema funciona contando o até o tempo desejado, que deve ser inserido com o teclado matricial.</p>
 Para inserir o tempo é necessário deixar apertado o botão de pause, e em seguida apertar o "*" no teclado.
 Após digitar o "*" deve-se digitar o tempo em 4 digitos no formato minutos:segundos, logo dois digitos para
 os minutos e dois digitos para os segundos. Após inserido, o tempo é exibido no display por 3 segundos, depois
