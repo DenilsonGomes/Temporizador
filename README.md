@@ -21,10 +21,10 @@ Arduino Uno com Atmega 328p.<p/>
 -----------
 
 <p></p>
-<p>O sistema funciona contando o até o tempo desejado, que deve ser inserido com o teclado matricial.<p>
-Para inserir o tempo é necessário deixar apertado o botão de pause, e em seguida apertar o "*" no teclado.</p>
+<p>O sistema funciona contando o até o tempo desejado, que deve ser inserido com o teclado matricial.
+Para inserir o tempo é necessário deixar apertado o botão de pause, e em seguida apertar o "*" no teclado.
 Após digitar o "*" deve-se digitar o tempo em 4 digitos no formato minutos:segundos, logo dois digitos para
-os minutos e dois digitos para os segundos.</p>
-Após inserido, o tempo é exibido no display por 3 segundos, depois o display volta o valor que estava.</p>
-Depois de voltar para o tempo atual, o temporizador está pronto para contar até o tempo desejado.</p>
-Para iniciar a contagem basta apertar o play. O botão reset pode ser acionado sem a contagem estar pausada.</p>
+os minutos e dois digitos para os segundos.
+Após inserido, o tempo é exibido no display por 3 segundos, depois o display volta o valor que estava.
+Depois de voltar para o tempo atual, o temporizador está pronto para contar até o tempo desejado.
+Para iniciar a contagem basta apertar o play. O botão reset pode ser acionado sem a contagem estar pausada.
