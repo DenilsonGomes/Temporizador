@@ -49,6 +49,19 @@ void loop()
   for(segundos = 0; segundos < 60; segundos++)  //Conta os segundos de 0 a 59
   {  
    
+    // -- Acionamento do Alarme --
+    while (tempint == (minutos*100 + segundos)){
+      digitalWrite(alarme, HIGH); //Ativar o alarme
+      display.showNumberDecEx(tempint, &segto); //Exibir tempo no display
+
+      int reset = digitalRead(botReset); //Variavel reset recebe a leitura de botReset
+      if(reset){ //Se o botao for pressionado
+        minutos = 0; segundos = 0; //Resetar o tempo
+        digitalWrite(alarme, LOW); //Desativar o alarme
+        display.showNumberDecEx(100*minutos + segundos, &segto); //Exibir tempo no display
+      }
+    }
+    
     int pause = digitalRead(botPause); //Variavel pause recebe o estado de botPause
     while(pause){ //Enquanto botPause estiver pressionado
       
@@ -101,19 +114,7 @@ void loop()
       minutos = 0; segundos = 0; //Resetar o tempo
       display.showNumberDecEx(100*minutos + segundos, &segto); //Exibir tempo no display
     }
-
-    // -- Acionamento do Alarme --
-    while (tempint == (minutos*100 + segundos)){
-      digitalWrite(alarme, HIGH); //Ativar o alarme
-      display.showNumberDecEx(tempint, &segto); //Exibir tempo no display
-
-      int reset = digitalRead(botReset); //Variavel reset recebe a leitura de botReset
-      if(reset){ //Se o botao for pressionado
-        minutos = 0; segundos = 0; //Resetar o tempo
-        digitalWrite(alarme, LOW); //Desativar o alarme
-        display.showNumberDecEx(100*minutos + segundos, &segto); //Exibir tempo no display
-      }
-    }
+    
     delay(1000);  //Tempo de espera da contagem
   }
 minutos++; //Acrescenta a variavel minutos
