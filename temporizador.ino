@@ -24,7 +24,7 @@ char teclas[4][3] = {{'1','2','3'},
                      {'*','0','#'}};
 
 char tempo[3]; // Variavel para tempo
-int tempint;
+int tempint = 100000;
 char tecla_pressionada;
 
 // -- Instancia de objetos --
@@ -59,37 +59,38 @@ void loop()
       if(reset){ //Se o botao for pressionado
         minutos = 0; segundos = 0; //Resetar o tempo
       }
-      if (teclado1.getKey() == '*'){
-        tecla_pressionada = teclado1.getKey();
-        while(!tecla_pressionada){
-          tecla_pressionada = teclado1.getKey();
+      if (teclado1.getKey() == '*'){ //Se o asterisco for pressionado
+        tecla_pressionada = teclado1.getKey(); //Lê o teclado
+        while(!tecla_pressionada){ //Enquanto nenhuma tecla for apertada
+          tecla_pressionada = teclado1.getKey(); //Lê o teclado
         }
-        tempo[0] = tecla_pressionada;
-        Serial.println(tecla_pressionada);
+        tempo[0] = tecla_pressionada; //tempo[0] recebe a tecla pressionada
+        Serial.println(tecla_pressionada); //printa a tecla na serial
         
-        tecla_pressionada = teclado1.getKey();
-        while(!tecla_pressionada){
-          tecla_pressionada = teclado1.getKey();
+        tecla_pressionada = teclado1.getKey(); //Lê o teclado
+        while(!tecla_pressionada){ //Enquanto nenhuma tecla for apertada
+          tecla_pressionada = teclado1.getKey(); //Lê o teclado
         }
-        tempo[1]= tecla_pressionada;
-        Serial.println(tecla_pressionada);
+        tempo[1]= tecla_pressionada; //tempo[1] recebe a tecla pressionada
+        Serial.println(tecla_pressionada); //printa a tecla na serial
                 
-        tecla_pressionada = teclado1.getKey();
-        while(!tecla_pressionada){
-          tecla_pressionada = teclado1.getKey();
+        tecla_pressionada = teclado1.getKey(); //Lê o teclado
+        while(!tecla_pressionada){ //Enquanto nenhuma tecla for apertada
+          tecla_pressionada = teclado1.getKey(); //Lê o teclado
         }
-        tempo[2] = tecla_pressionada;
-        Serial.println(tecla_pressionada);  
+        tempo[2] = tecla_pressionada; //tempo[2] recebe a tecla pressionada
+        Serial.println(tecla_pressionada); //printa a tecla na serial
         
-        tecla_pressionada = teclado1.getKey();
-        while(!tecla_pressionada){
-          tecla_pressionada = teclado1.getKey();
+        tecla_pressionada = teclado1.getKey(); //Lê o teclado
+        while(!tecla_pressionada){ //Enquanto nenhuma tecla for apertada
+          tecla_pressionada = teclado1.getKey(); //Lê o teclado
         }
-        tempo[3] = tecla_pressionada;
-        Serial.println(tempo);
-        tempint = atoi(tempo);
-        Serial.println(tempint);
-        display.showNumberDecEx(tempo, &segto); //Exibe o tempo com os dois pontos
+        tempo[3] = tecla_pressionada; //tempo[3] recebe a tecla pressionada
+        Serial.println(tempo); //printa o tempo na serial
+        tempint = atoi(tempo); //converte o tempo (char) para (int)
+        Serial.println(tempint); //printa o tempo na serial
+        display.showNumberDecEx(tempint, &segto); //Exibe o tempo com os dois pontos
+        delay(2000); //Espera 2 segundos
       }
     }
     
