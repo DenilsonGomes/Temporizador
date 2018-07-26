@@ -21,7 +21,7 @@ Arduino Uno com Atmega 328p.<p/>
 -----------
 
 <p></p>
-<p>O sistema funciona contando o até o tempo desejado, que deve ser inserido com o teclado matricial.</p>
+<p>O sistema funciona contando o até o tempo desejado, que deve ser inserido com o teclado matricial.<p>
 Para inserir o tempo é necessário deixar apertado o botão de pause, e em seguida apertar o "*" no teclado.</p>
 Após digitar o "*" deve-se digitar o tempo em 4 digitos no formato minutos:segundos, logo dois digitos para
 os minutos e dois digitos para os segundos.</p>
