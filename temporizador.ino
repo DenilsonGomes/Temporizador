@@ -99,7 +99,7 @@ void loop()
     int reset = digitalRead(botReset); //Variavel reset recebe a leitura de botReset
     if(reset){ //Se o botao for pressionado
       minutos = 0; segundos = 0; //Resetar o tempo
-      display.showNumberDecEx(tempint, &segto); //Exibir tempo no display
+      display.showNumberDecEx(100*minutos + segundos, &segto); //Exibir tempo no display
     }
 
     // -- Acionamento do Alarme --
@@ -111,7 +111,7 @@ void loop()
       if(reset){ //Se o botao for pressionado
         minutos = 0; segundos = 0; //Resetar o tempo
         digitalWrite(alarme, LOW); //Desativar o alarme
-        display.showNumberDecEx(tempint, &segto); //Exibir tempo no display
+        display.showNumberDecEx(100*minutos + segundos, &segto); //Exibir tempo no display
       }
     }
     delay(1000);  //Tempo de espera da contagem
