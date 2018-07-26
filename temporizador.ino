@@ -90,7 +90,7 @@ void loop()
         tempint = atoi(tempo); //converte o tempo (char) para (int)
         Serial.println(tempint); //printa o tempo na serial
         display.showNumberDecEx(tempint, &segto); //Exibe o tempo com os dois pontos
-        delay(2000); //Espera 2 segundos
+        delay(3000); //Espera 3 segundos
       }
     }
     
@@ -99,17 +99,19 @@ void loop()
     int reset = digitalRead(botReset); //Variavel reset recebe a leitura de botReset
     if(reset){ //Se o botao for pressionado
       minutos = 0; segundos = 0; //Resetar o tempo
+      display.showNumberDecEx(tempint, &segto); //Exibir tempo no display
     }
 
     // -- Acionamento do Alarme --
     while (tempint == (minutos*100 + segundos)){
       digitalWrite(alarme, HIGH); //Ativar o alarme
-      display.showNumberDecEx(tempint, &segto); //Exibir i-minutos no display
+      display.showNumberDecEx(tempint, &segto); //Exibir tempo no display
 
       int reset = digitalRead(botReset); //Variavel reset recebe a leitura de botReset
       if(reset){ //Se o botao for pressionado
         minutos = 0; segundos = 0; //Resetar o tempo
         digitalWrite(alarme, LOW); //Desativar o alarme
+        display.showNumberDecEx(tempint, &segto); //Exibir tempo no display
       }
     }
     delay(1000);  //Tempo de espera da contagem
