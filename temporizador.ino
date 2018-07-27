@@ -7,17 +7,19 @@
 #include <Keypad.h> // Inclui a biblioteca do teclado
 
 // -- Variaveis e Constantes --
-const int DIO = 9; //Define o pino 8 para o sinal digital
-const int CLK = 10; //Define o pino 9 para o clock
+int alarme = 2; //Variavel para alarme
+int botReset = 3; //Botao Reset
+int botPause = 4; //Botao botPause
+
+const int DIO = 5; //Define o pino 8 para o sinal digital
+const int CLK = 6; //Define o pino 9 para o clock
+
+byte pinosColunas[] = {9,8,7}; //Pinos das colunas
+byte pinosLinhas[]  = {13,12,11,10}; //Pinos das linhas
 
 int segundos = 0;  //Quantidade de segundos
 int minutos = 0; //Quantidade de minutos
-int alarme = 11; //Variavel para alarme
-int botReset = 12; //Botao Reset
-int botPause = 13; //Botao botPause
 
-byte pinosLinhas[]  = {2,3,4,5};
-byte pinosColunas[] = {6,7,8};
 char teclas[4][3] = {{'1','2','3'},
                      {'4','5','6'},
                      {'7','8','9'},
